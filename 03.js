@@ -4,7 +4,9 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
-function buscarAmigo(amigos, nombre) {
+function buscarAmigo(amigos, nombre) { 
+  // *H: amigos= [{nombre:"",edad:1},{...}]   nombre=["Alejo"; "..."]
+  // *T: nombre=["Alejo"] --> {nombre:"Alejo", edad:20}
   // La funcion llamada 'buscarAmigo' recibe como argumento un array llamado 'amigos' que contiene
   // en cada posición del arreglo un objeto que tiene como propiedades 'nombre' y 'edad'. También
   // recibe un string llamado 'nombre'.
@@ -14,7 +16,13 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  var amigoEncontrado= [];
+
+  for( i=0; i<amigos.length; i++){
+    if(amigos[i].nombre === nombre){
+      amigoEncontrado = amigos[i]
+    }
+  } return amigoEncontrado;
 }
 
 // No modifiques nada debajo de esta linea //
